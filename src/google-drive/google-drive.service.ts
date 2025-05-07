@@ -13,6 +13,7 @@ export class GoogleDriveService {
 
 
     this.folderId = process.env.folder_id || 'BR5=';
+    console.log(`ID de la carpeta: ${this.folderId}`);
 
     this.auth = new google.auth.JWT({
       email: process.env.client_email,
