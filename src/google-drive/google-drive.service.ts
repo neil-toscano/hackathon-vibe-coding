@@ -14,7 +14,8 @@ export class GoogleDriveService {
 
     this.folderId = process.env.folder_id || 'BR5=';
     console.log(`ID de la carpeta: ${this.folderId}`);
-
+    console.log(`email de la carpeta: ${process.env.client_email}`);
+    console.log(`key de la carpeta: ${process.env.private_key}`);
     this.auth = new google.auth.JWT({
       email: process.env.client_email,
       key: process.env.private_key,
